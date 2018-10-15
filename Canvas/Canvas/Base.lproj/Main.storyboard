@@ -22,7 +22,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="excited" translatesAutoresizingMaskIntoConstraints="NO" id="i7f-ri-VeV">
-                                        <rect key="frame" x="177" y="47" width="60" height="60"/>
+                                        <rect key="frame" x="77" y="47" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -30,7 +30,7 @@
                                         </connections>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="wink" translatesAutoresizingMaskIntoConstraints="NO" id="bae-Xm-Nop">
-                                        <rect key="frame" x="311" y="47" width="60" height="60"/>
+                                        <rect key="frame" x="147" y="47" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -38,7 +38,7 @@
                                         </connections>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="iYR-Mx-aEx">
-                                        <rect key="frame" x="39" y="47" width="60" height="60"/>
+                                        <rect key="frame" x="11" y="47" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -50,7 +50,7 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="sad" translatesAutoresizingMaskIntoConstraints="NO" id="YD7-QU-2df">
-                                        <rect key="frame" x="313" y="121" width="60" height="60"/>
+                                        <rect key="frame" x="280" y="47" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -58,7 +58,7 @@
                                         </connections>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="tongue" translatesAutoresizingMaskIntoConstraints="NO" id="5cc-fz-cPu">
-                                        <rect key="frame" x="179" y="121" width="60" height="60"/>
+                                        <rect key="frame" x="213" y="47" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -66,12 +66,20 @@
                                         </connections>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="dead" translatesAutoresizingMaskIntoConstraints="NO" id="LQs-B0-WvI">
-                                        <rect key="frame" x="41" y="121" width="60" height="60"/>
+                                        <rect key="frame" x="344" y="47" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="Jny-8z-wiE" appends="YES" id="svc-Dg-R94"/>
                                         </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="smiling-face-with-smiling-eyes" translatesAutoresizingMaskIntoConstraints="NO" id="tNB-9g-NVr">
+                                        <rect key="frame" x="12" y="126" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="smiling-face-with-smiling-eyes_2" translatesAutoresizingMaskIntoConstraints="NO" id="u6L-aY-ag2">
+                                        <rect key="frame" x="81" y="126" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -134,6 +142,8 @@
         <image name="excited" width="60" height="60"/>
         <image name="happy" width="60" height="60"/>
         <image name="sad" width="60" height="60"/>
+        <image name="smiling-face-with-smiling-eyes" width="60" height="60"/>
+        <image name="smiling-face-with-smiling-eyes_2" width="60" height="60"/>
         <image name="tongue" width="60" height="60"/>
         <image name="wink" width="60" height="60"/>
     </resources>
