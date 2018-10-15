@@ -53,5 +53,10 @@ class CanvasViewController: UIViewController {
             }
         }
     }
-   
+    
+    
+    @IBAction func didPanFace(_ sender: UIPanGestureRecognizer) {
+        
+    }
+    
 }
