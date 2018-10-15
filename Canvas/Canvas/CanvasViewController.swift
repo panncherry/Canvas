@@ -23,7 +23,8 @@ class CanvasViewController: UIViewController {
         trayDownOffset = 160
         trayUp = trayView.center // The initial position of the tray
         trayDown = CGPoint(x: trayView.center.x ,y: trayView.center.y + trayDownOffset) // The position of the tray transposed down
-        // Do any additional setup after loading the view.
+        
+        self.view.isUserInteractionEnabled = true
     }
     
     @IBAction func didPanTray(_ sender: UIPanGestureRecognizer) {
