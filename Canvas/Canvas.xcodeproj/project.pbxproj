@@ -14,6 +14,7 @@
 		08FB1284217449D4008CA8B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FB1282217449D4008CA8B7 /* LaunchScreen.storyboard */; };
 		08FB128F217449D4008CA8B7 /* CanvasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB128E217449D4008CA8B7 /* CanvasTests.swift */; };
 		08FB129A217449D4008CA8B7 /* CanvasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB1299217449D4008CA8B7 /* CanvasUITests.swift */; };
+		08FB12AA21744B77008CA8B7 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB12A921744B77008CA8B7 /* CanvasViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		08FB1295217449D4008CA8B7 /* CanvasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanvasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FB1299217449D4008CA8B7 /* CanvasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasUITests.swift; sourceTree = "<group>"; };
 		08FB129B217449D4008CA8B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08FB12A921744B77008CA8B7 /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				08FB1279217449D2008CA8B7 /* AppDelegate.swift */,
 				08FB127B217449D2008CA8B7 /* ViewController.swift */,
+				08FB12A921744B77008CA8B7 /* CanvasViewController.swift */,
 				08FB127D217449D2008CA8B7 /* Main.storyboard */,
 				08FB1280217449D4008CA8B7 /* Assets.xcassets */,
 				08FB1282217449D4008CA8B7 /* LaunchScreen.storyboard */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08FB127C217449D2008CA8B7 /* ViewController.swift in Sources */,
+				08FB12AA21744B77008CA8B7 /* CanvasViewController.swift in Sources */,
 				08FB127A217449D2008CA8B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
