@@ -19,7 +19,9 @@ class CanvasViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func didPanTray(_ sender: UIPanGestureRecognizer) {
+    }
+    
     /*
     // MARK: - Navigation
 
