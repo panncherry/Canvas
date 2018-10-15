@@ -11,6 +11,7 @@ import UIKit
 class CanvasViewController: UIViewController {
 
     @IBOutlet weak var trayView: UIView!
+    var trayOriginalCenter: CGPoint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
