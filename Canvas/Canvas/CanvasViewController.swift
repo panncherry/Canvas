@@ -27,7 +27,16 @@ class CanvasViewController: UIViewController {
         trayUp = trayView.center // The initial position of the tray
         trayDown = CGPoint(x: trayView.center.x ,y: trayView.center.y + trayDownOffset) // The position of the tray transposed down
         
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didDoubleTapCanvas(sender:)))
+        tapGestureRecognizer.numberOfTapsRequired = 2
         self.view.isUserInteractionEnabled = true
+        self.view.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func didDoubleTapCanvas(sender: UITapGestureRecognizer) {
+        for case let faceView as UIImageView in self.view.subviews {
+            faceView.removeFromSuperview()
+        }
     }
     
     @IBAction func didPanTray(_ sender: UIPanGestureRecognizer) {
@@ -60,6 +69,7 @@ class CanvasViewController: UIViewController {
     
     @IBAction func didPanFace(_ sender: UIPanGestureRecognizer) {
         var imageView = sender.view as! UIImageView
+
         let translation = sender.translation(in: view)
         
         if sender.state == .began {
@@ -69,12 +79,50 @@ class CanvasViewController: UIViewController {
             newlyCreatedFace.center = imageView.center
             newlyCreatedFace.center.y += trayView.frame.origin.y
             newlyCreatedFaceOriginalCenter = newlyCreatedFace.center
+            
+            newlyCreatedFace.isUserInteractionEnabled = true
+            let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didPan))
+            newlyCreatedFace.addGestureRecognizer(panGestureRecognizer)
+            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(deleteSmileys))
+            newlyCreatedFace.addGestureRecognizer(doubleTapRecognizer)
         } else if sender.state == .changed {
             print("Gesture is changing")
             newlyCreatedFace.center = CGPoint(x: newlyCreatedFaceOriginalCenter.x + translation.x, y: newlyCreatedFaceOriginalCenter.y + translation.y)
         } else if sender.state == .ended {
             print("Gesture ended")
         }
+    }
+    
+    @objc func didPan(sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: view)
+        
+        if sender.state == .began {
+            print("Gesture began")
+            newlyCreatedFace = sender.view as! UIImageView // to get the face that we panned on.
+            newlyCreatedFaceOriginalCenter = newlyCreatedFace.center // so we can offset by translation later.
+            
+            UIView.animate(withDuration:0.4, delay: 0.0,
+                           options: [],
+                           animations: { () -> Void in
+                            self.newlyCreatedFace.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+            }, completion: nil)
+            
+        } else if sender.state == .changed {
+            print("Gesture is changing")
+            newlyCreatedFace.center = CGPoint(x: newlyCreatedFaceOriginalCenter.x + translation.x, y: newlyCreatedFaceOriginalCenter.y + translation.y)
+        } else if sender.state == .ended {
+            print("Gesture ended")
+            UIView.animate(withDuration:0.4, delay: 0.0,
+                           options: [],
+                           animations: { () -> Void in
+                            self.newlyCreatedFace.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            }, completion: nil)
+        }
+    }
+    
+    @objc func deleteSmileys(sender: UITapGestureRecognizer) {
+        let faceView = sender.view as! UIImageView
+        faceView.removeFromSuperview()
     }
     
 }
