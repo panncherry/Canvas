@@ -10,6 +10,8 @@ import UIKit
 
 class CanvasViewController: UIViewController {
 
+    @IBOutlet weak var trayView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
