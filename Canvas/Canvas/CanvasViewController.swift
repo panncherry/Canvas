@@ -16,7 +16,6 @@ class CanvasViewController: UIViewController {
     var trayUp: CGPoint!
     var trayDown: CGPoint!
     
-    @IBOutlet weak var downArrowImageView: UIImageView!
     var isArrowFacingUp = false
     
     override func viewDidLoad() {
@@ -51,15 +50,6 @@ class CanvasViewController: UIViewController {
                                 self.trayView.center = self.trayUp
                 }, completion: nil)
             }
-            UIView.animate(withDuration:0.2, delay: 0.0,
-                           options: [], animations: { () -> Void in
-                            if self.isArrowFacingUp {
-                                self.downArrowImageView.transform = CGAffineTransform(rotationAngle: .pi)
-                            } else {
-                                self.downArrowImageView.transform = CGAffineTransform.identity
-                            }
-                            
-            }, completion: nil)
         }
     }
    
