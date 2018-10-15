@@ -83,8 +83,13 @@ class CanvasViewController: UIViewController {
             newlyCreatedFace.isUserInteractionEnabled = true
             let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didPan))
             newlyCreatedFace.addGestureRecognizer(panGestureRecognizer)
+            let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(didPinch))
+            newlyCreatedFace.addGestureRecognizer(pinchGestureRecognizer)
+            let rotateGestureRecognizer = UIRotationGestureRecognizer(target: self, action: #selector(didRotated))
+            newlyCreatedFace.addGestureRecognizer(rotateGestureRecognizer)
             let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(deleteSmileys))
             newlyCreatedFace.addGestureRecognizer(doubleTapRecognizer)
+            
         } else if sender.state == .changed {
             print("Gesture is changing")
             newlyCreatedFace.center = CGPoint(x: newlyCreatedFaceOriginalCenter.x + translation.x, y: newlyCreatedFaceOriginalCenter.y + translation.y)
@@ -118,6 +123,23 @@ class CanvasViewController: UIViewController {
                             self.newlyCreatedFace.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             }, completion: nil)
         }
+    }
+    
+    @objc func didPinch(_ sender: UIPinchGestureRecognizer) {
+        let scale = sender.scale
+        if sender.state == .changed {
+            newlyCreatedFace.transform = newlyCreatedFace.transform.scaledBy(x: scale, y: scale)
+            sender.scale = 1
+        }
+    }
+    
+    @objc func didRotated(_ sender: UIRotationGestureRecognizer) {
+        let rotation = sender.rotation
+        if sender.state == .changed {
+            newlyCreatedFace.transform = newlyCreatedFace.transform.rotated(by: rotation)
+            sender.rotation = 0
+        }
+        
     }
     
     @objc func deleteSmileys(sender: UITapGestureRecognizer) {
