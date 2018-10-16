@@ -22,7 +22,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="excited" translatesAutoresizingMaskIntoConstraints="NO" id="i7f-ri-VeV">
-                                        <rect key="frame" x="77" y="47" width="60" height="60"/>
+                                        <rect key="frame" x="75" y="48" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -30,7 +30,7 @@
                                         </connections>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="wink" translatesAutoresizingMaskIntoConstraints="NO" id="bae-Xm-Nop">
-                                        <rect key="frame" x="147" y="47" width="60" height="60"/>
+                                        <rect key="frame" x="145" y="47" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -38,7 +38,7 @@
                                         </connections>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="iYR-Mx-aEx">
-                                        <rect key="frame" x="11" y="47" width="60" height="60"/>
+                                        <rect key="frame" x="9" y="47" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -74,12 +74,52 @@
                                         </connections>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="smiling-face-with-smiling-eyes" translatesAutoresizingMaskIntoConstraints="NO" id="tNB-9g-NVr">
-                                        <rect key="frame" x="12" y="126" width="60" height="60"/>
+                                        <rect key="frame" x="7" y="126" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="STb-3Y-ePW" appends="YES" id="d5I-m8-grM"/>
+                                        </connections>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="smiling-face-with-smiling-eyes_2" translatesAutoresizingMaskIntoConstraints="NO" id="u6L-aY-ag2">
-                                        <rect key="frame" x="81" y="126" width="60" height="60"/>
+                                        <rect key="frame" x="74" y="128" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="PS6-tb-hV2" appends="YES" id="blD-Mh-Om3"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="kissing-face-with-smiling-eyes_1f619" translatesAutoresizingMaskIntoConstraints="NO" id="hSK-yw-GGp">
+                                        <rect key="frame" x="142" y="127" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="c1P-2X-wS8" appends="YES" id="yWq-rW-zc4"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="smiling-face-with-horns_1f608" translatesAutoresizingMaskIntoConstraints="NO" id="YXx-n2-QJq">
+                                        <rect key="frame" x="344" y="126" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="dPT-1e-NGm" appends="YES" id="bD5-ki-hbk"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="smiling-face-with-heart-shaped-eyes_1f60d" translatesAutoresizingMaskIntoConstraints="NO" id="d1U-2e-xgR">
+                                        <rect key="frame" x="210" y="128" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="CBV-jA-RWu" appends="YES" id="Rgy-pR-0YN"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="smiling-face-with-smiling-eyes-and-hand-covering-mouth_1f92d" translatesAutoresizingMaskIntoConstraints="NO" id="Itk-Rv-yEk">
+                                        <rect key="frame" x="279" y="127" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="G7c-AX-nRf" appends="YES" id="POV-iZ-llT"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -132,6 +172,36 @@
                         <action selector="didPanFace:" destination="BYZ-38-t0r" id="xTi-8I-tXw"/>
                     </connections>
                 </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="STb-3Y-ePW">
+                    <connections>
+                        <action selector="didPanFace:" destination="BYZ-38-t0r" id="869-bn-UgD"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="PS6-tb-hV2">
+                    <connections>
+                        <action selector="didPanFace:" destination="BYZ-38-t0r" id="34h-j3-fwe"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="c1P-2X-wS8">
+                    <connections>
+                        <action selector="didPanFace:" destination="BYZ-38-t0r" id="hmJ-ch-iV0"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="CBV-jA-RWu">
+                    <connections>
+                        <action selector="didPanFace:" destination="BYZ-38-t0r" id="DiR-d5-yn2"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="G7c-AX-nRf">
+                    <connections>
+                        <action selector="didPanFace:" destination="BYZ-38-t0r" id="ELo-5l-162"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="dPT-1e-NGm">
+                    <connections>
+                        <action selector="didPanFace:" destination="BYZ-38-t0r" id="Zyi-EU-mxg"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="53.623188405797109" y="26.90217391304348"/>
         </scene>
@@ -141,8 +211,12 @@
         <image name="down_arrow" width="20" height="14"/>
         <image name="excited" width="60" height="60"/>
         <image name="happy" width="60" height="60"/>
+        <image name="kissing-face-with-smiling-eyes_1f619" width="60" height="60"/>
         <image name="sad" width="60" height="60"/>
+        <image name="smiling-face-with-heart-shaped-eyes_1f60d" width="60" height="60"/>
+        <image name="smiling-face-with-horns_1f608" width="60" height="60"/>
         <image name="smiling-face-with-smiling-eyes" width="60" height="60"/>
+        <image name="smiling-face-with-smiling-eyes-and-hand-covering-mouth_1f92d" width="60" height="60"/>
         <image name="smiling-face-with-smiling-eyes_2" width="60" height="60"/>
         <image name="tongue" width="60" height="60"/>
         <image name="wink" width="60" height="60"/>
