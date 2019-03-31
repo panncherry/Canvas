@@ -131,9 +131,9 @@ class CanvasViewController: UIViewController {
     
     @objc func didPinch(_ sender: UIPinchGestureRecognizer) {
         let scale = sender.scale
-        print("did pinch")
-            newlyCreatedFace.transform = newlyCreatedFace.transform.scaledBy(x: scale, y: scale)
-            sender.scale = 1
+       // let imageView = sender.view as! UIImageView
+        newlyCreatedFace.transform = CGAffineTransform(scaleX: scale, y: scale)
+        sender.scale = 1
     }
     
     @objc func didRotated(_ sender: UIRotationGestureRecognizer) {
