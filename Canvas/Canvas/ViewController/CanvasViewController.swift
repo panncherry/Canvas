@@ -9,8 +9,11 @@
 import UIKit
 
 class CanvasViewController: UIViewController {
-
+    
+    // MARK: IBOutlets
     @IBOutlet weak var trayView: UIView!
+    
+    // MARK: Properties
     var trayOriginalCenter: CGPoint!
     var trayDownOffset: CGFloat!
     var trayUp: CGPoint!
@@ -21,8 +24,10 @@ class CanvasViewController: UIViewController {
     
     var isArrowFacingUp = false
     
+    // MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         trayDownOffset = 160
         trayUp = trayView.center // The initial position of the tray
         trayDown = CGPoint(x: trayView.center.x ,y: trayView.center.y + trayDownOffset) // The position of the tray transposed down
@@ -33,14 +38,10 @@ class CanvasViewController: UIViewController {
         self.view.addGestureRecognizer(tapGestureRecognizer)
     }
     
-    @objc func didDoubleTapCanvas(sender: UITapGestureRecognizer) {
-        for case let faceView as UIImageView in self.view.subviews {
-            faceView.removeFromSuperview()
-        }
-    }
     
+    // MARK: - IBActions
     @IBAction func didPanTray(_ sender: UIPanGestureRecognizer) {
-        let location = sender.location(in: view)
+        _ = sender.location(in: view)
         let velocity = sender.velocity(in: view)
         let translation = sender.translation(in: view)
         
@@ -68,8 +69,8 @@ class CanvasViewController: UIViewController {
     
     
     @IBAction func didPanFace(_ sender: UIPanGestureRecognizer) {
-        var imageView = sender.view as! UIImageView
-
+        let imageView = sender.view as! UIImageView
+        
         let translation = sender.translation(in: view)
         
         if sender.state == .began {
@@ -102,12 +103,14 @@ class CanvasViewController: UIViewController {
         }
     }
     
+    
+    // MARK: - Helper Functions
     @objc func didPan(sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: view)
         
         if sender.state == .began {
             print("Gesture began")
-            newlyCreatedFace = sender.view as! UIImageView // to get the face that we panned on.
+            newlyCreatedFace = sender.view as? UIImageView // to get the face that we panned on.
             newlyCreatedFaceOriginalCenter = newlyCreatedFace.center // so we can offset by translation later.
             
             UIView.animate(withDuration:0.4, delay: 0.0,
@@ -131,7 +134,7 @@ class CanvasViewController: UIViewController {
     
     @objc func didPinch(_ sender: UIPinchGestureRecognizer) {
         let scale = sender.scale
-       // let imageView = sender.view as! UIImageView
+        // let imageView = sender.view as! UIImageView
         newlyCreatedFace.transform = CGAffineTransform(scaleX: scale, y: scale)
         sender.scale = 1
     }
@@ -139,13 +142,19 @@ class CanvasViewController: UIViewController {
     @objc func didRotated(_ sender: UIRotationGestureRecognizer) {
         let rotation = sender.rotation
         print("did rotate")
-            newlyCreatedFace.transform = newlyCreatedFace.transform.rotated(by: rotation)
-            sender.rotation = 0
+        newlyCreatedFace.transform = newlyCreatedFace.transform.rotated(by: rotation)
+        sender.rotation = 0
     }
     
     @objc func deleteSmileys(sender: UITapGestureRecognizer) {
         let faceView = sender.view as! UIImageView
         faceView.removeFromSuperview()
+    }
+    
+    @objc func didDoubleTapCanvas(sender: UITapGestureRecognizer) {
+        for case let faceView as UIImageView in self.view.subviews {
+            faceView.removeFromSuperview()
+        }
     }
     
 }

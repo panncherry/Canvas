@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		08FB127A217449D2008CA8B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB1279217449D2008CA8B7 /* AppDelegate.swift */; };
-		08FB127C217449D2008CA8B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB127B217449D2008CA8B7 /* ViewController.swift */; };
 		08FB127F217449D2008CA8B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FB127D217449D2008CA8B7 /* Main.storyboard */; };
 		08FB1281217449D4008CA8B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08FB1280217449D4008CA8B7 /* Assets.xcassets */; };
 		08FB1284217449D4008CA8B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FB1282217449D4008CA8B7 /* LaunchScreen.storyboard */; };
@@ -37,7 +36,6 @@
 /* Begin PBXFileReference section */
 		08FB1276217449D2008CA8B7 /* Canvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canvas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FB1279217449D2008CA8B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		08FB127B217449D2008CA8B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		08FB127E217449D2008CA8B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08FB1280217449D4008CA8B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08FB1283217449D4008CA8B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +74,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08EC5E892350328300BD53DD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				08FB127D217449D2008CA8B7 /* Main.storyboard */,
+				08FB1282217449D4008CA8B7 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		08EC5E8A2350329F00BD53DD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				08FB12A921744B77008CA8B7 /* CanvasViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		08FB126D217449D2008CA8B7 = {
 			isa = PBXGroup;
 			children = (
@@ -100,11 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				08FB1279217449D2008CA8B7 /* AppDelegate.swift */,
-				08FB127B217449D2008CA8B7 /* ViewController.swift */,
-				08FB12A921744B77008CA8B7 /* CanvasViewController.swift */,
-				08FB127D217449D2008CA8B7 /* Main.storyboard */,
+				08EC5E8A2350329F00BD53DD /* ViewController */,
+				08EC5E892350328300BD53DD /* Storyboards */,
 				08FB1280217449D4008CA8B7 /* Assets.xcassets */,
-				08FB1282217449D4008CA8B7 /* LaunchScreen.storyboard */,
 				08FB1285217449D4008CA8B7 /* Info.plist */,
 			);
 			path = Canvas;
@@ -196,13 +209,16 @@
 				TargetAttributes = {
 					08FB1275217449D2008CA8B7 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1100;
 					};
 					08FB1289217449D4008CA8B7 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1100;
 						TestTargetID = 08FB1275217449D2008CA8B7;
 					};
 					08FB1294217449D4008CA8B7 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1100;
 						TestTargetID = 08FB1275217449D2008CA8B7;
 					};
 				};
@@ -259,7 +275,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08FB127C217449D2008CA8B7 /* ViewController.swift in Sources */,
 				08FB12AA21744B77008CA8B7 /* CanvasViewController.swift in Sources */,
 				08FB127A217449D2008CA8B7 /* AppDelegate.swift in Sources */,
 			);
@@ -445,7 +460,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RnR.Canvas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -463,7 +478,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RnR.Canvas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -483,7 +498,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RnR.CanvasTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canvas.app/Canvas";
 			};
@@ -504,7 +519,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RnR.CanvasTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canvas.app/Canvas";
 			};
@@ -524,7 +539,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RnR.CanvasUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Canvas;
 			};
@@ -544,7 +559,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RnR.CanvasUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Canvas;
 			};
